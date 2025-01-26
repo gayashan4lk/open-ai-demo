@@ -19,10 +19,10 @@ export function GenerateText() {
   return (
     <div>
       {data && (
-        <>
-          <p>role: {data.message.role}</p>
-          <p>message: {data.message.content}</p>
-        </>
+        <div className="p-3 my-2 rounded-lg bg-white shadow-sm text-gray-700">
+          <p className="text-xs opacity-60">{data.message.role}</p>
+          <p>{data.message.content}</p>
+        </div>
       )}
 
       <form onSubmit={(e) => { e.preventDefault(); trigger(inputText) }}>
